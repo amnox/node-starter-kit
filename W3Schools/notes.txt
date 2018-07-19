@@ -1,0 +1,6 @@
+The createServer method of http accepts a callback that is passed 2 objects. 
+A request and response
+
+Response handles all the outgoing stuff and req manages all the paramters of the incoming req eg url, req headers etc.
+
+To work with File Uploads use formidable module
