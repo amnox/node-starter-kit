@@ -3,3 +3,19 @@ Node.js Notes
 Its an Open SOurce Runtime Env for running JavaScript Code (Like JRE)
 
 Inventor: Ryan Dhal
+
+To run a file 
+-> goto directory 
+-> node {filename}
+
+'global' object is the equivalent of 'window' object of browser, in node
+
+Every file in Node js is considered a separate module, unlike browser javascript in with everything is stored in a global object, the variables and functions defined in a module are limited to the scope of that module i.e they are not available in other modules.
+
+To use variables and functions of different files, it is required to expicitly export them. So when we import this file from other modules, only the objects we exported will be visible.
+
+eg: var logger = require('./logger')
+
+Before executing code in a file, node wraps everything in a module wrapper function which is an Immediately Invoked Function Expression{IFFE}
+
+Various Node.js modules: https://nodejs.org/dist/latest-v8.x/docs/api/
