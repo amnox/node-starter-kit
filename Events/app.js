@@ -14,3 +14,11 @@ emitter.on('messageLogged', (...args)=>{
  */
 emitter.emit('messageLogged', 1, 'url')
 
+const Logger = require('./logger')
+const logger = new Logger()
+
+logger.on('message', (arg) => {
+    console.log('extended Logger', arg)
+})
+
+logger.log('This is the message we Preach')
