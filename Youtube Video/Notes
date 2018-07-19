@@ -19,3 +19,5 @@ eg: var logger = require('./logger')
 Before executing code in a file, node wraps everything in a module wrapper function which is an Immediately Invoked Function Expression{IFFE}
 
 Various Node.js modules: https://nodejs.org/dist/latest-v8.x/docs/api/
+
+File Reads Mainly Come in 2 flavours - Synchronous and Asynchronous
