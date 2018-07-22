@@ -13,3 +13,18 @@ example: express --view=pug myapp
 This creates a project named myapp in the current directory with pug templating engine
 
 finally cd into the project and run: npm install
+
+Routing
+
+app.METHOD(PATH, HANDLER_METHOD)
+
+METHOD can be any HTTP call - GET, OPTIONS, DELETE, POST
+
+Serving Static files
+
+Static files can be served using the builtin middleware express.static
+
+to initialize:
+
+app.use(VIRTUAL_PATH, express.static(DIRECTORY))
+virtual path is optional
