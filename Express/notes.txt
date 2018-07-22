@@ -2,3 +2,14 @@ Install Express
 
 npm install -g express
 
+Intro: https://www.youtube.com/watch?v=HxGt_3F0ULg
+
+Using express generator to bootstrap a project
+
+Install: npm install express-generator -g
+
+example: express --view=pug myapp
+
+This creates a project named myapp in the current directory with pug templating engine
+
+finally cd into the project and run: npm install
