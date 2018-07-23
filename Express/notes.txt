@@ -28,3 +28,11 @@ to initialize:
 
 app.use(VIRTUAL_PATH, express.static(DIRECTORY))
 virtual path is optional
+
+Must See: https://expressjs.com/en/starter/faq.html
+
+Appart from the middleware mechanism that is implented app wide, it is possible to write chained route handlers that are executed in sequence.
+
+In a chain of route handles the intermediate methods are passed a next method which they call to execute the next function in line, until they reach the method responsible for returning response.
+
+

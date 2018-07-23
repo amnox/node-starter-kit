@@ -17,26 +17,18 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/static',express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
+
+// middleware function that passes date object to response
+app.use(function (req, res, next) {
+  req.requestTime = Date.now()
+  next()
+})
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-var cb0 = function (req, res, next) {
-  console.log('CB0')
-  next()
-}
 
-var cb1 = function (req, res, next) {
-  console.log('CB1')
-  next()
-}
 
-app.get('/example/d', [cb0, cb1], function (req, res, next) {
-  console.log('the response will be sent by the next function ...')
-  next()
-}, function (req, res) {
-  res.send('Hello from D!')
-})
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
